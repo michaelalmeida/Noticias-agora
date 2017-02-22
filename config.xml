@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "br.com.michaelalmeida.noticias" 
+        versionCode = "11" 
+        version     = "1.1.4" >
+		
+        <name>Notícias Agora</name>
+        <description>
+            Um leitor de notícias simples e bonito.
+        </description>
+        <author email="app@michaelalmeida.com.br" href="http://michaelalmeida.com.br">
+            Michael Ramos de Almeida
+        </author>
+		
+        <content src="index.html" />
+		
+		<preference name="Fullscreen" value="false" />
+		
+		<preference name="Orientation" value="default" />
+		
+		<!-- Plugin Links -->
+		<plugin name="cordova-plugin-whitelist" />
+		<access origin="*" />
+		
+		<!-- Cor da barra de status -->
+		<plugin name="cordova-plugin-statusbar"/>
+		<preference value="true" name="StatusBarOverlaysWebView"/>
+		<preference value="#24a487" name="StatusBarBackgroundColor"/>
+
+		<plugin name="cordova-plugin-x-socialsharing" />
+
+		<!-- Compartilhamento -->
+		<feature name="SocialSharing">
+		  <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+		</feature>
+		
+		<!-- Localização -->
+		<plugin name="cordova-plugin-geolocation" />
+		
+		<!-- Android  -->
+		
+		<preference name="KeepRunning" value="false"/>
+		<preference name="LoadUrlTimeoutValue" value="10000"/>
+		<preference name="InAppBrowserStorageEnabled" value="true"/>
+
+		<platform name="android">
+              <icon src="res/icon/android/icon-36-ldpi.png" density="ldpi" />
+              <icon src="res/icon/android/icon-48-mdpi.png" density="mdpi" />
+              <icon src="res/icon/android/icon-72-hdpi.png" density="hdpi" />
+              <icon src="res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
+              <icon src="res/icon/android/icon-144-xxhdpi.png" density="xxhdpi" />
+		</platform>
+
+		<!-- Suporte as versões do Android  -->
+		
+		<preference name="android-minSdkVersion" value="11" />
+		<preference name="android-targetSdkVersion" value="11" />
+		
+		<!-- Tela de abertura -->
+
+		<splash src="res/screen/android/screen-ldpi-portrait.png" platform="android" qualifier="ldpi" />
+		<splash src="res/screen/android/screen-mdpi-portrait.png" platform="android" qualifier="mdpi" />
+		<splash src="res/screen/android/screen-hdpi-portrait.png" platform="android" qualifier="hdpi" />
+		<splash src="res/screen/android/screen-xhdpi-portrait.png" platform="android" qualifier="xhdpi" />
+		<splash src="res/screen/android/screen-xhdpi-landscape.png" platform="android" qualifier="port-xxhdpi" />
+		<<splash src="res/screen/android/screen-xhdpi-landscape.png" platform="android" qualifier="land-xxhdpi" />
+
+
+		<!-- Permissões -->
+		<feature name="http://api.phonegap.com/1.0/network" />
+		<feature name="http://api.phonegap.com/1.0/geolocation" />
+		
+    </widget>

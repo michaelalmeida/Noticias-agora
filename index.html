@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content='yes' name='apple-mobile-web-app-capable' />
+        <meta content='black' name='apple-mobile-web-app-status-bar-style' />
+        
+        <title>Notícias Agora</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="fontes/stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.css" /> 
+    
+
+    </head>
+
+    <body>
+    <div data-role="page" id="page-inicial">
+
+        <!-- MENU PRINCIPAL -->
+        <header class="header" >
+            <div class="logo">
+                <a href="#right-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open right panel</a>
+                <img src="img/logo.svg"/>
+            </div>
+            <nav class="menu" data-role="main" >
+                <ul>
+                   
+                    <li><a  href="categorias.html" title="Categorias" data-transition="slide" data-ajax="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path fill="#757575"  d="M20 36h8v-4h-8v4zM6 12v4h36v-4H6zm6 14h24v-4H12v4z"/></svg>
+                    </a></li>
+                    <li><a  href="configuracoes.html" title="Configurações" data-transition="slide"  data-ajax="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                            <path fill="#757575"  d="M45.4 37.9L27.1 19.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C1 14.2 1.8 20.2 5.8 24.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"/>
+                            <path  clip-rule="evenodd" fill="none" d="M0 0h48v48H0z"/>
+                        </svg>
+                    </a></li>
+                     <li><a  href="info.html" title="Últimas notícias"  >      
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                            <path d="M0 0h48v48H0z" fill="none"/>
+                            <path fill="#757575"  d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm2 30h-4V22h4v12zm0-16h-4v-4h4v4z"/>
+                        </svg>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="recarregar" onclick="rotateAnimation('recarregar');" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                <path d="M0 0h48v48H0z" fill="none"/>
+                <path fill="#ffffff" d="M24 10V2L14 12l10 10v-8c6.63 0 12 5.37 12 12s-5.37 12-12 12-12-5.37-12-12H8c0 8.84 7.16 16 16 16s16-7.16 16-16-7.16-16-16-16z"/>
+            </svg>
+        </div>
+
+        <div class="espaco-topo"></div>
+        <!-- PREVISÃO DO TEMPO -->
+        <section id="previsaodotempo">
+            <div class="tempo">
+                <div class="spinner">
+                  <div class="bounce1"></div>
+                  <div class="bounce2"></div>
+                  <div class="bounce3"></div>
+                </div>
+            </div>
+            <div class="cidade"></div>
+        </section>
+
+        <!-- NOTÍCIAS PÁGINA PRINCIPAL -->
+
+        <section class="noticias" id="ultimasnoticias">
+            <div id="state"><div class="spinner">
+                              <div class="bounce1"></div>
+                              <div class="bounce2"></div>
+                              <div class="bounce3"></div>
+                            </div>
+            </div>
+        </section>
+
+    </div>
+
+        
+        <!-- Categoria escolhida: #popup -->
+        <div data-role="page" id="categoriaescolhida">
+
+            <header class="header-categorias">
+                <a href="index.html" data-rel="back" data-transition="slidefade" data-direction="reverse" class="retornar"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+    <path fill="#ffffff" d="M30.83 32.67l-9.17-9.17 9.17-9.17L28 11.5l-12 12 12 12z"/>
+    <path d="M0-.5h48v48H0z" fill="none"/>
+</svg>
+                </a>
+
+                <h2 id="titulo-categoria"></h2>
+            </header>
+
+            <div role="main" class="ui-content" id="pull">
+                <section class="noticias" id="mostranoticias">
+                </section>
+            </div><!-- /content -->
+        </div><!-- /page popup -->
+
+
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="b">
+        <p>Right push panel.</p>
+        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right">Close</a>
+    </div><!-- /panel -->
+        
+        <!-- Página: #popup -->
+        <div data-role="page" id="abrelink">
+
+            <header class="header-categorias">
+                <a href="#" data-rel="back" data-transition="pop" data-direction="reverse" class="retornar"> 
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+    <path fill="#ffffff" d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z"/>
+    <path d="M0 0h48v48H0z" fill="none"/>
+</svg>
+ </a>
+
+                <a href="#" class="retornar" id="btn-compartilhar"> 
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48">
+    <path d="M0 0h48v48H0z" fill="none"/>
+    <path fill="#ffffff" d="M36 32.17c-1.52 0-2.89.59-3.93 1.54L17.82 25.4c.11-.45.18-.92.18-1.4s-.07-.95-.18-1.4l14.1-8.23c1.07 1 2.5 1.62 4.08 1.62 3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6c0 .48.07.95.18 1.4l-14.1 8.23c-1.07-1-2.5-1.62-4.08-1.62-3.31 0-6 2.69-6 6s2.69 6 6 6c1.58 0 3.01-.62 4.08-1.62l14.25 8.31c-.1.42-.16.86-.16 1.31 0 3.22 2.61 5.83 5.83 5.83s5.83-2.61 5.83-5.83-2.61-5.83-5.83-5.83z"/>
+</svg>
+ </a>
+
+            </header>
+
+            <div role="main" class="ui-content">
+                <section class="mostra-noticia">
+                    <div class="spinner">
+                              <div class="bounce1"></div>
+                              <div class="bounce2"></div>
+                              <div class="bounce3"></div>
+                    </div>
+                    <!--<iframe id="urlnoticia" frameborder="0" height="100%" width="100%"></iframe>-->
+                </section>
+            </div><!-- /content -->
+        </div><!-- /page popup -->
+        
+        
+        
+        <!-- Javascript https://ajax.googleapis.com/ajax/  ?sensor=false -->
+        <script type="text/javascript" src="js/jsapi.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simpleWeather.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+        
+
+        <script type="text/javascript" src="js/principal.js"></script>
+        <script type="text/javascript" src="js/configuracao.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+
+        
+
+        
+    </body>
+</html>

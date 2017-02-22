@@ -1,0 +1,197 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="format-detection" content="telephone=no" />
+            <meta name="msapplication-tap-highlight" content="no" />
+            <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+                 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+             <link rel="stylesheet" type="text/css" href="fontes/stylesheet.css" />
+            <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+            <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.css" />
+            <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.css" /> 
+            <title>Notícias Agora</title>
+        </head>
+        <body>
+        <div data-role="page">
+            <script type="text/javascript" src="js/categorias.js"></script>
+
+            <!-- MENU PRINCIPAL -->
+            <header class="header">
+
+                <a href="index.html" data-rel="back" data-transition="slidefade" data-direction="reverse" class="retornar">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 48 48">
+        <path fill="#ffffff" d="M30.83 32.67l-9.17-9.17 9.17-9.17L28 11.5l-12 12 12 12z"/>
+        <path d="M0-.5h48v48H0z" fill="none"/>
+    </svg>
+                </a>
+
+                <div class="logo">
+                    <img src="img/logo.svg"/>
+                </div>
+            </header>
+            <!-- CATEGORIAS -->
+            <nav class="categorias">
+                <ul>
+                    <a  href="#categoriaescolhida" onclick="mostracategoria(1)" data-rel="dialog" data-transition="pop">
+                        <li class="ultimas">
+                            <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                                <path d="M0 0h48v48H0z" fill="none"/>
+                                <path fill="#ffffff" d="M46 24l-4.88-5.56.68-7.37-7.22-1.63-3.78-6.36L24 6l-6.8-2.92-3.78 6.36-7.22 1.63.68 7.37L2 24l4.88 5.56-.68 7.37 7.22 1.63 3.78 6.36L24 42l6.8 2.92 3.78-6.36 7.22-1.63-.68-7.37L46 24zM26 34h-4v-4h4v4zm0-8h-4V14h4v12z"/>
+                            </svg>
+                            </span>
+                            <h1>Últimas notícias</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(2);" data-rel="dialog" data-transition="pop">
+                        <li class="brasil">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                                    <path fill="#ffffff" d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+                                    <path d="M0 0h48v48H0z" fill="none"/>
+                                </svg>
+
+                            </span>
+                            <h1>Brasil</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(3);" data-rel="dialog" data-transition="pop">
+                        <li class="tecnologia">
+                            <span>   
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                                    <path d="M0 0h48v48H0z" fill="none"/>
+                                    <path fill="#ffffff" d="M34 2.02L14 2c-2.21 0-4 1.79-4 4v36c0 2.21 1.79 4 4 4h20c2.21 0 4-1.79 4-4V6c0-2.21-1.79-3.98-4-3.98zM34 38H14V10h20v28z"/>
+                                </svg>
+                            </span>
+                            <h1>Tecnologia</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(4);" data-rel="dialog" data-transition="pop">
+                        <li class="esportes">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 48 48">
+                                    <defs>
+                                        <path id="a" d="M0 0h48v48H0z" />
+                                    </defs>
+                                    <clipPath id="b">
+                                        <use xlink:href="#a" overflow="visible"/>
+                                    </clipPath>
+                                    <path  fill="#ffffff" clip-path="url(#b)" d="M27 9c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm-7.2 27.8l1.9-8.8 4.3 4v12h4V28.9l-4.1-4.1 1.2-6C29.7 22 33.6 24 38 24v-4c-3.7 0-6.9-2-8.7-4.9l-1.9-3.2c-.7-1.2-2-1.9-3.4-1.9-.5 0-1 .1-1.5.3L12 14.6V24h4v-6.7l3.5-1.4L16.4 32l-9.8-1.9-.8 3.9s14 2.7 14 2.8z"/>
+                                </svg>
+                            </span>
+                            <h1>Esportes</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(5);" data-rel="dialog" data-transition="pop">
+                        <li class="entretenimento">
+                            <span>    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                                    <path d="M0 0h48v48H0z" fill="none"/>
+                                    <path fill="#ffffff" d="M42 6H6c-2.21 0-4 1.79-4 4v24c0 2.21 1.79 4 4 4h10v4h16v-4h10c2.21 0 3.98-1.79 3.98-4L46 10c0-2.21-1.79-4-4-4zm0 28H6V10h36v24z"/>
+                                </svg>
+                            </span>
+                            <h1>Entretenimento</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(6);" data-rel="dialog" data-transition="pop">
+                        <li class="mundo">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                                    <path d="M0 0h48v48H0z" fill="none"/>
+                                    <path fill="#ffffff" d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm-2 35.86C14.11 38.88 8 32.16 8 24c0-1.23.15-2.43.42-3.58L18 30v2c0 2.21 1.79 4 4 4v3.86zm13.79-5.07C35.28 33.17 33.78 32 32 32h-2v-6c0-1.1-.9-2-2-2H16v-4h4c1.1 0 2-.9 2-2v-4h4c2.21 0 4-1.79 4-4v-.83c5.86 2.37 10 8.11 10 14.83 0 4.16-1.6 7.94-4.21 10.79z"/>
+                                </svg>
+                            </span>
+                            <h1>Mundo</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(7);" data-rel="dialog" data-transition="pop">
+                        <li class="negocios">
+                            <span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+        <path fill="none" d="M0 0h48v48H0zm19.99 10h8v4h-8zm0 0h8v4h-8z"/>
+        <path fill="#ffffff" d="M20 32v-2H6.02L6 38c0 2.22 1.78 4 4 4h28c2.22 0 4-1.78 4-4v-8H28v2h-8zm20-18h-8.02v-4l-4-4h-8L16 10v4H8.01c-2.21 0-4 1.79-4 4v6c0 2.21 1.79 4 4 4h12v-4h8v4h12c2.21 0 4-1.79 4-4v-6c-.01-2.21-1.8-4-4.01-4zm-12.01 0h-8v-4h8v4z"/>
+    </svg>
+                            </span>
+                            <h1>Negócios</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(8);" data-rel="dialog" data-transition="pop">
+                        <li  class="politica">
+                            <span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+        <path d="M0 0h48v48H0z" fill="none"/>
+        <path fill="#ffffff" d="M8 20v14h6V20H8zm12 0v14h6V20h-6zM4 44h38v-6H4v6zm28-24v14h6V20h-6zM23 2L4 12v4h38v-4L23 2z"/>
+    </svg>
+                            </span>
+                            <h1>Política</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(9);" data-rel="dialog" data-transition="pop">
+                        <li  class="saude">
+                            <span>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+        <path d="M0 0h48v48H0z" fill="none"/>
+        <path fill="#ffffff" d="M38 6H10c-2.21 0-3.98 1.79-3.98 4L6 38c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V10c0-2.21-1.79-4-4-4zm-2 22h-8v8h-8v-8h-8v-8h8v-8h8v8h8v8z"/>
+    </svg>
+
+                            </span>
+                            <h1>Saúde</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(10);" data-rel="dialog" data-transition="pop">
+                        <li class="games">
+                            <span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+        <path d="M0 0h48v48H0z" fill="none"/>
+        <path fill="#ffffff" d="M30 15V4H18v11l6 6 6-6zm-15 3H4v12h11l6-6-6-6zm3 15v11h12V33l-6-6-6 6zm15-15l-6 6 6 6h11V18H33z"/>
+    </svg>
+                            </span>
+                            <h1>Games</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(11);" data-rel="dialog" data-transition="pop">
+                        <li class="musica">
+                            <span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+        <path d="M0 0h48v48H0z" fill="none"/>
+        <path fill="#ffffff" d="M30 12H6v4h24v-4zm0 8H6v4h24v-4zM6 32h16v-4H6v4zm28-20v16.37c-.63-.23-1.29-.37-2-.37-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6V16h6v-4H34z"/>
+    </svg>
+    </span>
+                            <h1>Música</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(12);" data-rel="dialog" data-transition="pop">
+                        <li class="cultura">
+                            <span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+        <path fill="#ffffff" d="M24 6C14.06 6 6 14.06 6 24s8.06 18 18 18c1.66 0 3-1.34 3-3 0-.78-.29-1.48-.78-2.01-.47-.53-.75-1.22-.75-1.99 0-1.66 1.34-3 3-3H32c5.52 0 10-4.48 10-10 0-8.84-8.06-16-18-16zM13 24c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm6-8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm10 0c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm6 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+        <path d="M0 0h48v48H0z" fill="none"/>
+    </svg>
+    </span>
+                            <h1>Cultura</h1>
+                        </li>
+                    </a>
+                    <a href="#categoriaescolhida" onclick="mostracategoria(13);" data-rel="dialog" data-transition="pop">
+                        <li class="cinema">
+                            <span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+        <path fill="#ffffff" d="M36 6v4h-4V6H16v4h-4V6H8v36h4v-4h4v4h16v-4h4v4h4V6h-4zM16 34h-4v-4h4v4zm0-8h-4v-4h4v4zm0-8h-4v-4h4v4zm20 16h-4v-4h4v4zm0-8h-4v-4h4v4zm0-8h-4v-4h4v4z"/>
+        <path d="M0 0h48v48H0z" fill="none"/>
+    </svg>
+    </span>
+                            <h1>Cinema</h1>
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+
+
+
+        </div>
+
+        </body>
+    </html>
