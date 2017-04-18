@@ -6,51 +6,13 @@ var latitude;
 var longitude;
 
 if (previsao === "0") {
-  /* Não faço nada */
-
   var campotempo = document.getElementById("previsaodotempo");
   campotempo.style.display = "none";
 
- // console.log("Estou desativado");
-
-  /*var campotempo = document.getElementById("previsaodotempo");
-  campotempo.innerHTML = "<p>Você precisa definir uma cidade para poder obter informações sobre o tempo. Vá para tela de configurações e escolha sua cidade.</h2>";
-*/
 } else if (previsao === "1" || previsao === null) {
 
-/*
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log("navigator.geolocation works well");
-}
-
-function onSuccess(position) {
-    var element = document.getElementById('previsaodotempo');
-    element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-                        'Longitude: ' + position.coords.longitude     + '<br />' +
-                        '<hr />'      + element.innerHTML;
-}
-
-// onError Callback receives a PositionError object
-//
-function onError(error) {
-
-  var element = document.getElementById('previsaodotempo');
-    element.innerHTML = 'code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n';
-}
-
-// Options: throw an error if no update is received every 30 seconds.
-//
-navigator.geolocation.getCurrentPosition(onSuccess, onError);*/
-
-      /* Pega as coordenadas atuais */
-
-      //
     document.addEventListener("deviceready", onDeviceReady, false);
 
-    // Cordova is ready
-    //
     function onDeviceReady() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
@@ -136,7 +98,6 @@ var ultimasnoticias=document.getElementById("ultimasnoticias");
 var feedurl;
 var feedlimit;
 
-//localStorage.getItem("infiniteScrollEnabled") === null)
 
 if (localStorage.getItem("p_ultimasnoticias") === null) {
   feedurl = "http://www.bbc.com/portuguese/topicos/brasil/index.xml";
@@ -211,7 +172,6 @@ function displayfeed(result){
      rssoutput="<ul class='lista-noticias'><li>Não conseguimos encontrar essa fonte de notícias</li></ul>";
     }
 
-// href='" + thefeeds[i].link + "'
 
 window.onload=function(){
     rssfeedsetup()
@@ -219,15 +179,9 @@ window.onload=function(){
 
 function abreurl(url, titulo){
 
-    //var iframe = document.getElementById("urlnoticia");
-    //iframe.setAttribute("src", "http://www.google.com");
+
 
     var compartilhar = document.getElementById("btn-compartilhar");
-
-    //compartilhar.setAttribute("onclick", "window.plugins.socialsharing.share('"+titulo+", Lida no app Notícias Agora', null, 'https://www.google.nl/images/srpr/logo4w.png', '"+url+"')");
-                            
-    //compartilhar.setAttribute("onclick", "window.plugins.socialsharing.share('"+titulo+", Lida no app Notícias Agora', null, '"+url+"')");
-    //<object data='+url+' type="text/html" height="100%" width="100%" class="visualizador"/>
 
     compartilhar.setAttribute("onclick", "window.plugins.socialsharing.share('"+titulo+" - Lida no app Notícias Agora', null, null, '"+url+"')");
 
@@ -237,10 +191,8 @@ function abreurl(url, titulo){
 
 // Animação rotação
 
-
 function rotateAnimation(id){
   var el = document.getElementById(id);
- // console.log(el);
 
   el.setAttribute("class", "animacao_rotacao");
 
