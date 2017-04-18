@@ -1,6 +1,6 @@
 # Noticias agora
 
-<span style="padding:20px; background:#fff3e0">A API usada no projeto era fornecida pelo Google e foi descontinuada em dezembro de 2016, por isso no momento não há exibição de notícias dentro do aplicativo.</span>
+<b>A API usada no projeto era fornecida pelo Google e foi descontinuada em dezembro de 2016, por isso no momento não há exibição de notícias dentro do aplicativo.</b>
 
 Alicativo que apresenta as últimas notícias de variados temas. Você pode escolher entre ler as categorias que deseja, ou ter um resumo das principais notícias na tela inicial. Há a sessão de previsão do tempo, onde é exibido seu local* e a temperatura atual. Você poderá desativar essa função quando desejar.
 
@@ -15,7 +15,7 @@ Mais informações: <a href="http://michael.eti.br/trabalhos/noticias-agora/">ht
 
 <hr/>
 
-<span style="padding:20px; background:#fff3e0">The API used in the app was deprecated and stopped working after December 15th, 2016. For now, It's impossible to see news in the application.</span>
+<b>The API used in the app was deprecated and stopped working after December 15th, 2016. For now, It's impossible to see news in the application.</b>
 
 News aplication developed with Phonegap using HTML5, CSS3 and JavaScript. You can choose the best news for you or, in the main page, view the breaking news.
 
