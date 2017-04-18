@@ -1,10 +1,3 @@
-/*document.addEventListener("deviceready", onDeviceReady, true);
-function onDeviceReady() {
-    //StatusBar.backgroundColorByHexString("#24a487");
-}
-*/
-
-
 // Controla a escolha da categoria
 
 var url;
@@ -20,7 +13,6 @@ function mostracategoria(categoria) {
 		case 1:
 			titulo.innerHTML = "Útilmas notícias";
 			header[0].style.backgroundColor = "#607D8B";
-			//StatusBar.backgroundColorByHexString("#607D8B");
 
 			if (localStorage.getItem("p_ultimasnoticias") === null) {
 			  url = "http://www.bbc.com/portuguese/topicos/brasil/index.xml";
@@ -54,7 +46,6 @@ function mostracategoria(categoria) {
 		case 2:
 			titulo.innerHTML = "Brasil";
 			header[0].style.backgroundColor = "#4CAF50";
-			//StatusBar.backgroundColorByHexString("#4CAF50");
 
 			url = 'http://www.bbc.co.uk/portuguese/topicos/brasil/index.xml';
 
@@ -63,7 +54,6 @@ function mostracategoria(categoria) {
 		case 3:
 			titulo.innerHTML = "Tecnologia";
 			header[0].style.backgroundColor = "#FF9800";
-			//StatusBar.backgroundColorByHexString("#FF9800");
 
 			url = 'http://g1.globo.com/dynamo/tecnologia/rss2.xml';
 
@@ -72,7 +62,6 @@ function mostracategoria(categoria) {
 		case 4:
 			titulo.innerHTML = "Esportes";
 			header[0].style.backgroundColor = "#F44336";
-			//StatusBar.backgroundColorByHexString("#F44336");
 
 			url = 'http://globoesporte.globo.com/Esportes/Rss/0,,AS0-9645,00.xml';
 			
@@ -81,7 +70,6 @@ function mostracategoria(categoria) {
 		case 5:
 			titulo.innerHTML = "Entretenimento";
 			header[0].style.backgroundColor = "#3F51B5";
-			//StatusBar.backgroundColorByHexString("#3F51B5");
 			
 			url = 'http://rss.uol.com.br/feed/entretenimento.xml';
 
@@ -90,7 +78,6 @@ function mostracategoria(categoria) {
 		case 6:
 			titulo.innerHTML = "Mundo";
 			header[0].style.backgroundColor = "#00BCD4";
-			//StatusBar.backgroundColorByHexString("#00BCD4");
 
 			url = 'http://www.bbc.co.uk/portuguese/topicos/internacional/index.xml';
 			
@@ -99,7 +86,6 @@ function mostracategoria(categoria) {
 		case 7:
 			titulo.innerHTML = "Negócios";
 			header[0].style.backgroundColor = "#FF5722";
-			//StatusBar.backgroundColorByHexString("#FF5722");
 
 			url = 'http://feeds.feedburner.com/SoEmExame?format=xml';
 			rssfeedsetup();
@@ -107,7 +93,6 @@ function mostracategoria(categoria) {
 		case 8:
 			titulo.innerHTML = "Política";
 			header[0].style.backgroundColor = "#9C27B0";
-			//StatusBar.backgroundColorByHexString("#9C27B0");
 			
 			url = 'http://feeds.jn.pt/JN-Politica'
 
@@ -116,7 +101,6 @@ function mostracategoria(categoria) {
 		case 9:
 			titulo.innerHTML = "Saúde";
 			header[0].style.backgroundColor = "#8BC34A";
-			//StatusBar.backgroundColorByHexString("#8BC34A");
 
 			url = 'http://noticias.r7.com/saude/feed.xml';
 
@@ -125,7 +109,6 @@ function mostracategoria(categoria) {
 		case 10:
 			titulo.innerHTML = "Games";
 			header[0].style.backgroundColor = "#D6523C";
-			//StatusBar.backgroundColorByHexString("#D6523C");
 
 			url = 'http://www.gamevicio.com/rss/news.xml';
 			rssfeedsetup();
@@ -133,7 +116,6 @@ function mostracategoria(categoria) {
 		case 11:
 			titulo.innerHTML = "Música";
 			header[0].style.backgroundColor = "#FCB941";
-			//StatusBar.backgroundColorByHexString("#FCB941");
 
 			url = 'http://g1.globo.com/dynamo/musica/rss2.xml';
 
@@ -142,7 +124,6 @@ function mostracategoria(categoria) {
 		case 12:
 			titulo.innerHTML = "Cultura";
 			header[0].style.backgroundColor = "#953163";
-			//StatusBar.backgroundColorByHexString("#953163");
 
 			url = 'http://www.cultura.gov.br/noticias-destaques/-/asset_publisher/OiKX3xlR9iTn/rss';
 
@@ -151,14 +132,12 @@ function mostracategoria(categoria) {
 		case 13:
 			titulo.innerHTML = "Cinema";
 			header[0].style.backgroundColor = "#2CC990";
-			//StatusBar.backgroundColorByHexString("#2CC990");
 
 			url = 'http://cinemacomrapadura.com.br/feed/';
 
 			rssfeedsetup();
 			break;
 		default:
-			//console.log("default");
 			break;
 	}
 }
@@ -207,28 +186,17 @@ function displayfeed(result){
     	 rssoutput="<ul class='lista-noticias'><li>Não conseguimos encontrar essa fonte de notícias</li></ul>";
     }
 
-// href='" + thefeeds[i].link + "'
 
 window.onload=function(){
     rssfeedsetup()
 }
-/*
-function abreurl(url){
 
-	var url_mobile = url;
 
-    var iframe = document.getElementById("urlnoticia");
-    iframe.setAttribute("src", url_mobile);
-}
-*/
 function abreurl(url, titulo){
 
-    //var iframe = document.getElementById("urlnoticia");
-    //iframe.setAttribute("src", "http://www.google.com");
-
+  
     var compartilhar = document.getElementById("btn-compartilhar");
 
-    //compartilhar.setAttribute("onclick", "window.plugins.socialsharing.share('"+titulo+", Lida no app Notícias Agora', null, 'https://www.google.nl/images/srpr/logo4w.png', '"+url+"')");
 
     compartilhar.setAttribute("onclick", "window.plugins.socialsharing.share('"+titulo+" - Lida no app Notícias Agora', null, null, '"+url+"')");
 
