@@ -29,6 +29,9 @@ The fist step to build this app was a creation of layout on Photoshop, then I st
 
 More infomation: <a href="http://michael.eti.br/en_US/trabalhos/noticias-agora/">http://michael.eti.br/en_US/trabalhos/noticias-agora/</a>
 
-<img src="http://michael.eti.br/wp-content/uploads/2017/02/Screenshot_20161225-034616-600x1100.png"/>
-<img src="http://michael.eti.br/wp-content/uploads/2017/02/Screenshot_20161225-034634-600x1100.png"/>
-<img src="http://michael.eti.br/wp-content/uploads/2017/02/Screenshot_20161225-034550-600x1100.png"/>
+## The App
+
+<img src="https://i.imgur.com/0eQN9VL.png"/>
+<img src="https://i.imgur.com/GeBmWlD.png"/>
+<img src="https://i.imgur.com/WcDjSBz.png"/>
+<img src="https://i.imgur.com/P7a2kAk.png"/>
